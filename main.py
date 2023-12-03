@@ -1,11 +1,9 @@
 from fastapi import FastAPI, HTTPException
-from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import random
 
 bachmanity_api = FastAPI()
-bachmanity_api.mount("/", StaticFiles(directory="static", html=True), name="static")
 
 class Insult(BaseModel):
     insult: str
