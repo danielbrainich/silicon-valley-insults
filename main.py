@@ -20,6 +20,10 @@ insults = {
     ],
 }
 
+@bachmanity_api.get("/")
+def read_root():
+    return {"message": "Welcome to the custom documentation page!"}
+
 @bachmanity_api.get('/insult', response_model=Insult)
 async def get_random_insult():
     all_insults = []
