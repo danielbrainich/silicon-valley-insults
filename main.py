@@ -1,8 +1,11 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import random
 
 bachmanity_api = FastAPI()
+bachmanity_api.mount("/", StaticFiles(directory="static", html=True), name="static")
 
 class Insult(BaseModel):
     insult: str
@@ -22,7 +25,7 @@ insults = {
 
 @bachmanity_api.get("/")
 def read_root():
-    return {"message": "Welcome to the custom documentation page!"}
+    return FileResponse("static/index.html")
 
 @bachmanity_api.get('/insult', response_model=Insult)
 async def get_random_insult():
