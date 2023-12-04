@@ -4,7 +4,7 @@ from pydantic import BaseModel
 import random
 
 
-bachmanity_api = FastAPI()
+silicon_valley_insults = FastAPI()
 
 class Insult(BaseModel):
     insult: str
@@ -22,11 +22,11 @@ insults = {
     ],
 }
 
-@bachmanity_api.get("/")
+@silicon_valley_insults.get("/")
 def read_root():
     return FileResponse("static/index.html")
 
-@bachmanity_api.get('/insult', response_model=Insult)
+@silicon_valley_insults.get('/insult', response_model=Insult)
 async def get_random_insult():
     all_insults = []
     for season in insults:
@@ -38,7 +38,7 @@ async def get_random_insult():
     random_insult = random.choice(all_insults)
     return {"insult": random_insult}
 
-@bachmanity_api.get('/insult/{season}', response_model=Insult)
+@silicon_valley_insults.get('/insult/{season}', response_model=Insult)
 async def get_season_insult(season: str):
     season_insults = insults.get(season, [])
     if not season_insults:
