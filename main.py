@@ -24,10 +24,10 @@ async def get_random_insult():
         raise HTTPException(status_code=404, detail="No insults available")
     random_insult = random.choice(all_insults)
     return DetailedInsult(
-        season=random_insult["Season"],
-        episode=random_insult["Episode"],
-        character=random_insult["Character"],
-        insult=random_insult["Insult"]
+        season=random_insult["season"],
+        episode=random_insult["episode"],
+        character=random_insult["character"],
+        insult=random_insult["insult"]
     )
 
 # @silicon_valley_insults.get("/api/insults", response_model=Insult)
