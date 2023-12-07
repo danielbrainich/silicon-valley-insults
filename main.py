@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import random
-import insults
+from insults import insults
 
 
 silicon_valley_insults = FastAPI()
@@ -19,7 +19,7 @@ def read_root():
 
 @silicon_valley_insults.get("/api/insults", response_model=DetailedInsult)
 async def get_random_insult():
-    all_insults = insults.get("insults")
+    all_insults = insults["insults"]
     if not all_insults:
         raise HTTPException(status_code=404, detail="No insults available")
     random_insult = random.choice(all_insults)
