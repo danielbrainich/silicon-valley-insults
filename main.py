@@ -1,11 +1,14 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import random
 from insults import insults
 
 
 silicon_valley_insults = FastAPI()
+silicon_valley_insults.mount("/static", StaticFiles(directory="static"), name="static")
+
 
 class DetailedInsult(BaseModel):
     season: int

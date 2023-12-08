@@ -4,95 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insults API Documentation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h1, h2, h3 {
-            color: #333;
-        }
-
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-family: "Courier New", monospace;
-        }
-
-        p {
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ccc;
-            margin: 20px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="static/main.css" />
 </head>
 <body>
 
-    <h1>Insults API Documentation</h1>
-
-    <p>Welcome to the Insults API documentation. This API provides a collection of insults from the TV show "Silicon Valley."</p>
-
-    <h2>Endpoints</h2>
-
-    <h3>/api/insults</h3>
-    <p>Get a random insult from all available insults.</p>
-    <code>GET /api/insults</code>
-
-    <h3>/api/insults/season/{season}</h3>
-    <p>Get a random insult for a specific season.</p>
-    <code>GET /api/insults/season/{season}</code>
-    <p>Parameters:</p>
-    <ul>
-        <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-    </ul>
-
-    <h3>/api/insults/season/{season}/episode/{episode}</h3>
-    <p>Get a random insult for a specific season and episode.</p>
-    <code>GET /api/insults/season/{season}/episode/{episode}</code>
-    <p>Parameters:</p>
-    <ul>
-        <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-        <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
-    </ul>
-
-    <h3>/api/insults/character/{character}</h3>
-    <p>Get a random insult for a specific character.</p>
-    <code>GET /api/insults/character/{character}</code>
-    <p>Parameters:</p>
-    <ul>
-        <li><code>character</code> (str): The character for which to retrieve an insult.</li>
-    </ul>
-
-    <h3>/api/insults/season/{season}/character/{character}</h3>
-    <p>Get a random insult for a specific season and character.</p>
-    <code>GET /api/insults/season/{season}/character/{character}</code>
-    <p>Parameters:</p>
-    <ul>
-        <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-        <li><code>character</code> (str): The character for which to retrieve an insult.</li>
-    </ul>
-
-    <h3>/api/insults/season/{season}/episode/{episode}/character/{character}</h3>
-    <p>Get a random insult for a specific season, episode, and character.</p>
-    <code>GET /api/insults/season/{season}/episode/{episode}/character/{character}</code>
-    <p>Parameters:</p>
-    <ul>
-        <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-        <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
-        <li><code>character</code> (str): The character for which to retrieve an insult.</li>
-    </ul>
-
-    <hr>
-
-    <p><p>For more details, referdd to the <a href="/docs">FastAPI documentation</a>.</p></p>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h1>Insults API Documentation</h1>
+                <p>Welcome to the Insults API documentation. This API provides a collection of insults from the TV show "Silicon Valley."</p>
+                <h2>Endpoints</h2>
+                <h3>/api/insults</h3>
+                <p>Get a random insult from all available insults.</p>
+                <code>GET /api/insults</code>
+                <h3>/api/insults/season/{season}</h3>
+                <p>Get a random insult for a specific season.</p>
+                <code>GET /api/insults/season/{season}</code>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+                </ul>
+                <h3>/api/insults/season/{season}/episode/{episode}</h3>
+                <p>Get a random insult for a specific season and episode.</p>
+                <code>GET /api/insults/season/{season}/episode/{episode}</code>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+                    <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
+                </ul>
+                <h3>/api/insults/character/{character}</h3>
+                <p>Get a random insult for a specific character.</p>
+                <code>GET /api/insults/character/{character}</code>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>character</code> (str): The character for which to retrieve an insult.</li>
+                </ul>
+                <h3>/api/insults/season/{season}/character/{character}</h3>
+                <p>Get a random insult for a specific season and character.</p>
+                <code>GET /api/insults/season/{season}/character/{character}</code>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+                    <li><code>character</code> (str): The character for which to retrieve an insult.</li>
+                </ul>
+                <h3>/api/insults/season/{season}/episode/{episode}/character/{character}</h3>
+                <p>Get a random insult for a specific season, episode, and character.</p>
+                <code>GET /api/insults/season/{season}/episode/{episode}/character/{character}</code>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+                    <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
+                    <li><code>character</code> (str): The character for which to retrieve an insult.</li>
+                </ul>
+                <hr>
+                <p>For more details, referdd to the <a href="/docs">FastAPI documentation</a>.</p></p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
