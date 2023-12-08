@@ -24,6 +24,41 @@ insults = {
             "character": "erlich",
             "insult": "You just disappeared up your own asshold. Did you know that?",
         },
+
+        {
+            "season": 1,
+            "episode": 2,
+            "character": "jared",
+            "insult": "My Uncle used to say, \"You look like someone starved a virgin to death.\"",
+        },
+
+        {
+            "season": 1,
+            "episode": 2,
+            "character": "erlich",
+            "insult": "We'll call you when we want pleated khakis",
+        },
+
+        {
+            "season": 1,
+            "episode": 2,
+            "character": "gilfoyle",
+            "insult": "While you were busy minoring in gender studies and singing a capella at Sarah Lawrence, I was gaining root access to NSA servers.",
+        },
+
+        {
+            "season": 1,
+            "episode": 2,
+            "character": "gilfoyle",
+            "insult": "As far as Pied Piper is concerned, he's as pointless as Mass Effect 3's multiple endings. I mean, he's a completely useless appendage and we all know it.",
+        },
+
+        {
+            "season": 1,
+            "episode": 2,
+            "character": "gavin",
+            "insult": "I hate Richard Hendricks, that little Pied Piper prick",
+        },
     ]
 }
 
