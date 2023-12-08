@@ -36,7 +36,7 @@ insults = {
             "season": 1,
             "episode": 2,
             "character": "erlich",
-            "insult": "We'll call you when we want pleated khakis",
+            "insult": "We'll call you when we want pleated khakis.",
         },
 
         {
@@ -57,7 +57,14 @@ insults = {
             "season": 1,
             "episode": 2,
             "character": "gavin",
-            "insult": "I hate Richard Hendricks, that little Pied Piper prick",
+            "insult": "I hate Richard Hendricks, that little Pied Piper prick.",
+        },
+
+        {
+            "season": 1,
+            "episode": 2,
+            "character": "erlich",
+            "insult": "Richard, stop being a fucking pussy and start being an asshole.",
         },
     ]
 }
