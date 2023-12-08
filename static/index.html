@@ -3,45 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Insults API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: "Courier New", monospace;
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        <h1>Welcome to the Silicon Valley Insults!</h1>
 
-        <h2>API Endpoints</h2>
+    <h1>Insults API Documentation</h1>
 
-        <p>Base URL: <code>/</code></p>
+    <p>Welcome to the Insults API documentation. This API provides a collection of insults from the TV show "Silicon Valley."</p>
 
-        <h3>Get Random Insult</h3>
-        <p>
-            <strong>Endpoint:</strong> <code>/insult</code><br>
-            <strong>Method:</strong> <code>GET</code><br>
-            <strong>Description:</strong> Get a random insult from all seasons.<br>
-            <strong>Response Example:</strong>
-            <pre>
-                {
-                    "insult": "s1 insult 2"
-                }
-            </pre>
-        </p>
+    <h2>Endpoints</h2>
 
-        <h3>Get Seasonal Insult</h3>
-        <p>
-            <strong>Endpoint:</strong> <code>/insult/{season}</code><br>
-            <strong>Method:</strong> <code>GET</code><br>
-            <strong>Description:</strong> Get a random insult from a specific season.<br>
-            <strong>Parameters:</strong> <code>season</code> (string, e.g., "s1", "s2")<br>
-            <strong>Response Example:</strong>
-            <pre>
-                {
-                    "insult": "s2 insult 3"
-                }
-            </pre>
-        </p>
-    </main>
-    <footer>
-        <p>For more details, refer to the <a href="/docs">API documentation</a>.</p>
-    </footer>
+    <h3>/api/insults</h3>
+    <p>Get a random insult from all available insults.</p>
+    <code>GET /api/insults</code>
+
+    <h3>/api/insults/season/{season}</h3>
+    <p>Get a random insult for a specific season.</p>
+    <code>GET /api/insults/season/{season}</code>
+    <p>Parameters:</p>
+    <ul>
+        <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+    </ul>
+
+    <h3>/api/insults/season/{season}/episode/{episode}</h3>
+    <p>Get a random insult for a specific season and episode.</p>
+    <code>GET /api/insults/season/{season}/episode/{episode}</code>
+    <p>Parameters:</p>
+    <ul>
+        <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+        <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
+    </ul>
+
+    <h3>/api/insults/character/{character}</h3>
+    <p>Get a random insult for a specific character.</p>
+    <code>GET /api/insults/character/{character}</code>
+    <p>Parameters:</p>
+    <ul>
+        <li><code>character</code> (str): The character for which to retrieve an insult.</li>
+    </ul>
+
+    <h3>/api/insults/season/{season}/character/{character}</h3>
+    <p>Get a random insult for a specific season and character.</p>
+    <code>GET /api/insults/season/{season}/character/{character}</code>
+    <p>Parameters:</p>
+    <ul>
+        <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+        <li><code>character</code> (str): The character for which to retrieve an insult.</li>
+    </ul>
+
+    <h3>/api/insults/season/{season}/episode/{episode}/character/{character}</h3>
+    <p>Get a random insult for a specific season, episode, and character.</p>
+    <code>GET /api/insults/season/{season}/episode/{episode}/character/{character}</code>
+    <p>Parameters:</p>
+    <ul>
+        <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+        <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
+        <li><code>character</code> (str): The character for which to retrieve an insult.</li>
+    </ul>
+
+    <hr>
+
+    <p><p>For more details, referdd to the <a href="/docs">FastAPI documentation</a>.</p></p>
+
 </body>
 </html>
