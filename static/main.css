@@ -21,17 +21,29 @@ h3 {
   color: red;
 }
 
-li {
+/* li {
   list-style-type: '🤬';
   padding-inline-start: 1ch;
-}
+} */
 
 nav li {
     list-style-type: none;
   }
-}
 
 a {
   color: red;
   text-decoration: none;
+}
+
+table {
+  margin-bottom: 1rem;
+}
+
+td:first-child {
+  padding-right: 2rem;
+  font-weight: bold;
+}
+
+.primary {
+  color: red;
 }

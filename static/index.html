@@ -33,14 +33,33 @@
                 <div class="d-flex flex-column align-items-center justify-content-center p-5">
                     <h1>Silicon Valley Insults <span class="primary">API</span></h1>
                     <h2>A restful API serving up the best insults from the HBO series "Silicon Valley"</h2>
-                    <iframe class="p-3" src="https://giphy.com/embed/xUPGcrMhSzm6lotKs8" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                    <div class="p-4">
+                        <p>Sample request:</p>
+                        <div class="text-white bg-dark p-3 pb-0">
+                            <pre>
+fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/character/gavin")
+    .then((response) => response.json())
+    .then((insult) => console.log(insult));
+                            </pre>
+                        </div>
+                        <p> Sample response:</p>
+                        <div class="text-white bg-dark p-3 pb-0">
+                            <pre>
+{
+    season: 1,
+    episode: 2,
+    character: "Gavin",
+    insult: "I hate Richard Hendricks, that little Pied Piper prick.",
+}
+                            </pre>
+                        </div>
+                    </div>
                 </div>
-
                 <div>
                     <h3>Important info</h3>
                     <ul>
                         <li>There is no API key.</li>
-                        <li>Some of these insults contain strong language.</li>
+                        <li>Many of these insults contain strong language.</li>
                         <li>If there's an insult you'd like me to add, let me know <a href="">here</a>.</li>
                     </ul>
                 </div>
@@ -55,108 +74,445 @@
                         <li><a href="#five">Get a random insult by season and by episode</a></li>
                         <li><a href="#six">Get a random insult by season and by episode and by character</a></li>
                     </ul>
-                </div>
 
+                <hr>
                 <div id="one" class="my-4">
                     <h3>Get a random insult</h3>
                     <p>Method: GET</p>
-                    <p>Path: /api/insults</path>
+                    <p>Path: /api/insults</p>
+                    <p>Parameters: n/a</p>
                     <p> Sample request:</p>
-                    <div class="card w-75 text-white bg-dark">
-                        <div class="card-body">
-                            <p class="card-text">
-                                {
-                                    anime: "Naruto",
-                                    character: "...",
-                                    quote: "..."
-                                }
-                            </p>
-                        </div>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+                        <pre>
+fetch("https://www.siliconvalleyinsults.com/api/insults")
+    .then((response) => response.json())
+    .then((insult) => console.log(insult));
+                        </pre>
                     </div>
-                    <p> Sample response:</p>
-                    <div class="card w-75 text-white bg-dark">
-                        <div class="card-body">
-                            <p class="card-text">
-                                {
-                                    anime: "Naruto",
-                                    character: "...",
-                                    quote: "..."
-                                }
-                            </p>
+                    <p> Response format:</p>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+
+                        <pre>
+{
+    season: ...,
+    episode: ...,
+    character: "...",
+    insult: "..."
+}
+                        </pre>
+                    </div>
+                </div>
+
+                <hr>
+                <div id="two" class="my-4">
+                    <h3>Get a random insult by character</h3>
+
+                    <table>
+                        <tr>
+                            <td>Method</td>
+                            <td>GET</td>
+                        </tr>
+                        <tr>
+                            <td>Path</td>
+                            <td>/api/insults/character/<span class="primary">{character}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Parameters</td>
+                            <td>{character} = a string representing the first name of character you want an insult from</td>
+                        </tr>
+                    </table>
+
+                    <p class="small mb-1"> Sample request:</p>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+                        <pre>
+fetch("https://www.siliconvalleyinsults.com/api/insults/erlich")
+    .then((response) => response.json())
+    .then((insult) => console.log(insult));
+                        </pre>
+                    </div>
+                    <p class="small mb-1"> Sample response format:</p>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+                        <pre>
+{
+    season: ...,
+    episode: ...,
+    character: "Erlich",
+    insult: "..."
+}
+                        </pre>
+                    </div>
+                </div>
+
+                <hr>
+                <div id="three" class="my-4">
+                    <h3>Get a random insult by season</h3>
+                    <p>Method: GET</p>
+                    <p>Path: /api/insults/season/{season}</p>
+                    <p>Parameters:</p>
+                    <ul>
+                        <li>{season}: An integer representing season you want an insult from</li>
+                    </ul>
+                    <p> Sample request:</p>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+                        <pre>
+fetch("https://www.siliconvalleyinsults.com/api/insults/season/1")
+    .then((response) => response.json())
+    .then((insult) => console.log(insult));
+                        </pre>
+                    </div>
+                    <p> Sample response format:</p>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+                        <pre>
+{
+    season: 1,
+    episode: ...,
+    character: "...",
+    insult: "..."
+}
+                        </pre>
+                    </div>
+                </div>
+
+                <hr>
+                <div id="four" class="my-4">
+                    <h3>Get a random insult by season and character</h3>
+                    <p>Method: GET</p>
+                    <p>Path: /api/insults/season/{season}/character/{character}</p>
+                    <p>Parameters:</p>
+                    <ul>
+                        <li>{season}: An integer representing the season you want an insult from</li>
+                        <li>{character}: A string representing the character you want an insult from</li>
+                    </ul>
+                    <p> Sample request:</p>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+                        <pre>
+fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/character/erlich")
+    .then((response) => response.json())
+    .then((insult) => console.log(insult));
+                        </pre>
+                    </div>
+                    <p> Sample response format:</p>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+                        <pre>
+{
+    season: 1,
+    episode: ...,
+    character: "Erlich",
+    insult: "..."
+}
+                        </pre>
+                    </div>
+                </div>
+
+                <hr>
+                <div id="five" class="my-4">
+                    <h3>Get a random insult by season and episode</h3>
+                    <p>Method: GET</p>
+                    <p>Path: /api/insults/season/{season}/character/{character}</p>
+                    <p>Parameters:</p>
+                    <ul>
+                        <li>{season}: An integer representing the season you want an insult from</li>
+                        <li>{episode}: An integer representing the episode you want an insult from</li>
+                    </ul>
+                    <p> Sample request:</p>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+                        <pre>
+fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/2")
+    .then((response) => response.json())
+    .then((insult) => console.log(insult));
+                        </pre>
+                    </div>
+                    <p> Sample response format:</p>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+                        <pre>
+{
+    season: 1,
+    episode: 2,
+    character: "...",
+    insult: "..."
+}
+                        </pre>
+                    </div>
+                </div>
+
+                <hr>
+                <div id="six" class="my-4">
+                    <h3>Get a random insult by season and episode and character</h3>
+                    <p>Method: GET</p>
+                    <p>Path: /api/insults/season/{season}/episode/{episode}/character/{character}</p>
+                    <p>Parameters:</p>
+                    <ul>
+                        <li>{season}: An integer representing the season you want an insult from</li>
+                        <li>{episode}: An integer representing the episode you want an insult from</li>
+                        <li>{character}: A string representing the character you want an insult from</li>
+                    </ul>
+                    <p> Sample request:</p>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+                        <pre>
+fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/2")
+    .then((response) => response.json())
+    .then((insult) => console.log(insult));
+                        </pre>
+                    </div>
+                    <p> Sample response format:</p>
+                    <div class="col-lg-6 text-white bg-dark p-3 pb-0">
+                        <pre>
+{
+    season: 1,
+    episode: 2,
+    character: "...",
+    insult: "..."
+}
+                        </pre>
+                    </div>
+                </div>
+
+
+<!--
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item m-2">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Get a random insult
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div id="one" class="my-4">
+                                <h3>Get a random insult</h3>
+                                <p>Method: GET</p>
+                                <p>Path: /api/insults</p>
+                                <p>Parameters: n/a</p>
+                                <p> Sample request:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            fetch("https://www.siliconvalleyinsults.com/api/insults")
+                .then((response) => response.json())
+                .then((insult) => console.log(insult));
+                                    </pre>
+                                </div>
+                                <p> Response format:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            {
+                season: ...,
+                episode: ...,
+                character: "...",
+                insult: "..."
+            }
+                                    </pre>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-            </div id="two" class="my-4">
-            <h3>Get a random insult by season</h3>
-            <p>Request accepted: GET</p>
-            <p>Path: /api/insults/season/{season}</p>
-            <div>Example Request:</div>
-            <code>
-
-                fetch("https://animechan.xyz/api/random/anime?title=naruto")
+                    <div class="accordion-item m-2">
+                        <h2 class="accordion-header" id="header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            Get a random insult by character
+                        </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div id="two" class="my-4">
+                                <h3>Get a random insult by character</h3>
+                                <p>Method: GET</p>
+                                <p>Path: /api/insults/character/{character}</p>
+                                <p>Parameters:</p>
+                                <ul>
+                                    <li>{character}: A string representing character you want an insult from</li>
+                                </ul>
+                                <p> Sample request:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            fetch("https://www.siliconvalleyinsults.com/api/insults")
                 .then((response) => response.json())
-                .then((quote) => console.log(quote));
+                .then((insult) => console.log(insult));
+                                    </pre>
+                                </div>
+                                <p> Response format:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            {
+                season: ...,
+                episode: ...,
+                character: "...",
+                insult: "..."
+            }
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            </code>
-            <div>Example Output:</div>
+                    <div class="accordion-item m-2">
+                        <h2 class="accordion-header" id="header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            Get a random insult by season
+                        </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div id="three" class="my-4">
+                                <h3>Get a random insult by season</h3>
+                                <p>Method: GET</p>
+                                <p>Path: /api/insults/season/{season}</p>
+                                <p>Parameters:</p>
+                                <ul>
+                                    <li>{season}: An integer representing season you want an insult from</li>
+                                </ul>
+                                <p> Sample request:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            fetch("https://www.siliconvalleyinsults.com/api/insults/season/1")
+                .then((response) => response.json())
+                .then((insult) => console.log(insult));
+                                    </pre>
+                                </div>
+                                <p> Sample response format:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            {
+                season: 1,
+                episode: ...,
+                character: "...",
+                insult: "..."
+            }
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="card w-75 text-white bg-dark">
-                <div class="card-body">
-                    <p class="card-text">
-                        {
-                            anime: "Naruto",
-                            character: "...",
-                            quote: "..."
-                        }
-                    </p>
+                    <div class="accordion-item m-2">
+                        <h2 class="accordion-header" id="header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            Get a random insult by season and character
+                        </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div id="four" class="my-4">
+                                <h3>Get a random insult by season and character</h3>
+                                <p>Method: GET</p>
+                                <p>Path: /api/insults/season/{season}/character/{character}</p>
+                                <p>Parameters:</p>
+                                <ul>
+                                    <li>{season}: An integer representing the season you want an insult from</li>
+                                    <li>{character}: A string representing the character you want an insult from</li>
+                                </ul>
+                                <p> Sample request:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/character/erlich")
+                .then((response) => response.json())
+                .then((insult) => console.log(insult));
+                                    </pre>
+                                </div>
+                                <p> Sample response format:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            {
+                season: 1,
+                episode: ...,
+                character: "Erlich",
+                insult: "..."
+            }
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="accordion-item m-2">
+                        <h2 class="accordion-header" id="header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                            Get a random insult by season and episode
+                        </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div id="five" class="my-4">
+                                <h3>Get a random insult by season and episode</h3>
+                                <p>Method: GET</p>
+                                <p>Path: /api/insults/season/{season}/character/{character}</p>
+                                <p>Parameters:</p>
+                                <ul>
+                                    <li>{season}: An integer representing the season you want an insult from</li>
+                                    <li>{episode}: An integer representing the episode you want an insult from</li>
+                                </ul>
+                                <p> Sample request:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/2")
+                .then((response) => response.json())
+                .then((insult) => console.log(insult));
+                                    </pre>
+                                </div>
+                                <p> Sample response format:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            {
+                season: 1,
+                episode: 2,
+                character: "...",
+                insult: "..."
+            }
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="accordion-item m-2">
+                        <h2 class="accordion-header" id="header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                            Get a random insult by season and episode and character
+                        </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div id="six" class="my-4">
+                                <h3>Get a random insult by season and episode and character</h3>
+                                <p>Method: GET</p>
+                                <p>Path: /api/insults/season/{season}/episode/{episode}/character/{character}</p>
+                                <p>Parameters:</p>
+                                <ul>
+                                    <li>{season}: An integer representing the season you want an insult from</li>
+                                    <li>{episode}: An integer representing the episode you want an insult from</li>
+                                    <li>{character}: A string representing the character you want an insult from</li>
+                                </ul>
+                                <p> Sample request:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/2")
+                .then((response) => response.json())
+                .then((insult) => console.log(insult));
+                                    </pre>
+                                </div>
+                                <p> Sample response format:</p>
+                                <div class="text-white bg-dark p-3 pb-0">
+                                    <pre>
+            {
+                season: 1,
+                episode: 2,
+                character: "...",
+                insult: "..."
+            }
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
-
-
-            <p>Parameters:</p>
-            <ul>
-                <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-            </ul>
         </div>
-
-        <h3>/api/insults/season/{season}/episode/{episode}</h3>
-        <p>Get a random insult for a specific season and episode.</p>
-        <code>GET /api/insults/season/{season}/episode/{episode}</code>
-        <p>Parameters:</p>
-        <ul>
-            <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-            <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
-        </ul>
-        <h3>/api/insults/character/{character}</h3>
-        <p>Get a random insult for a specific character.</p>
-        <code>GET /api/insults/character/{character}</code>
-        <p>Parameters:</p>
-        <ul>
-            <li><code>character</code> (str): The character for which to retrieve an insult.</li>
-        </ul>
-        <h3>/api/insults/season/{season}/character/{character}</h3>
-        <p>Get a random insult for a specific season and character.</p>
-        <code>GET /api/insults/season/{season}/character/{character}</code>
-        <p>Parameters:</p>
-        <ul>
-            <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-            <li><code>character</code> (str): The character for which to retrieve an insult.</li>
-        </ul>
-        <h3>/api/insults/season/{season}/episode/{episode}/character/{character}</h3>
-        <p>Get a random insult for a specific season, episode, and character.</p>
-        <code>GET /api/insults/season/{season}/episode/{episode}/character/{character}</code>
-        <p>Parameters:</p>
-        <ul>
-            <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-            <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
-            <li><code>character</code> (str): The character for which to retrieve an insult.</li>
-        </ul>
-        <hr>
-        <p>For more details, referdd to the <a href="/docs">FastAPI documentation</a>.</p></p>
     </div>
-</div>
-</div>
 <div class="row">
     <div class="col">
         <footer class="d-flex flex-column justify-content-center align-items-center p-5">
