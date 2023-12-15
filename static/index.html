@@ -3,64 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insults API Documentation</title>
+    <title>Silicon Valley Insults</title>
     <link rel="stylesheet" href="static/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="container d-flex flex-column min-vh-100">
+      <div class="row">
+        <div class="col">
 
-    <div class="container">
+          <header>
+            <nav class="navbar navbar-expand-lg pt-4 pb-4 sticky-top">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link px-4" href="#endpoints">Endpoints</a></li>
+                    <li class="nav-item"><a class="nav-link px-4" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-4" href="#info">Info</a></li>
+                  </ul>
+                </div>
+            </nav>
+          </header>
+
+        <div class="d-flex flex-column align-items-center justify-content-center">
+            <h1>Silicon Valley Insults API</h1>
+            <h2>A restful API serving up the best insults from the HBO series "Silicon Valley"</h2>
+            <iframe src="https://giphy.com/embed/xUPGcrMhSzm6lotKs8" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+
+        <h2>Docs</h2>
+        <div>
+            <h3>Important info</h3>
+            <ul>
+                <li>There is no API key.</li>
+                <li>Some of these insults contain strong language.</li>
+                <li>Rate limit is 100 requests per endpoint per hour.</li>
+                <li>If there's an insult you'd like me to add, let me know <a href="">here</a>.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Available endpoints</h3>
+            <ol>
+                <li><a href="#one">Get a random insult</a></li>
+                <li><a href="#two">Get a random insult by season</a></li>
+                <li><a href="#three">Get a random insult by character</a></li>
+                <li><a href="#four">Get a random insult by season and by character</a></li>
+                <li><a href="#five">Get a random insult by season and by episode</a></li>
+                <li><a href="#six">Get a random insult by season and by episode and by character</a></li>
+            </ol>
+        </div>
+
+        <div id="one" class="my-4">
+            <h3>Get a random insult</h3>
+            <code>GET /api/insults</code>
+        </div>
+
+        </div id="two" class="my-4">
+            <h3>Get a random insult by season</h3>
+            <p>Request accepted: GET</p>
+            <p>Path: /api/insults/season/{season}</p>
+            <div>Example Request:</div>
+            <code>
+                fetch("https://animechan.xyz/api/random/anime?title=naruto")
+                .then((response) => response.json())
+                .then((quote) => console.log(quote));
+            </code>
+            <div>Example Output:</div>
+            <code>
+                {
+                    anime: "Naruto",
+                    character: "...",
+                    quote: "..."
+                }
+            </code>
+            <p>Parameters:</p>
+            <ul>
+                <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+            </ul>
+        </div>
+
+        <h3>/api/insults/season/{season}/episode/{episode}</h3>
+        <p>Get a random insult for a specific season and episode.</p>
+        <code>GET /api/insults/season/{season}/episode/{episode}</code>
+        <p>Parameters:</p>
+        <ul>
+            <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+            <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
+        </ul>
+        <h3>/api/insults/character/{character}</h3>
+        <p>Get a random insult for a specific character.</p>
+        <code>GET /api/insults/character/{character}</code>
+        <p>Parameters:</p>
+        <ul>
+            <li><code>character</code> (str): The character for which to retrieve an insult.</li>
+        </ul>
+        <h3>/api/insults/season/{season}/character/{character}</h3>
+        <p>Get a random insult for a specific season and character.</p>
+        <code>GET /api/insults/season/{season}/character/{character}</code>
+        <p>Parameters:</p>
+        <ul>
+            <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+            <li><code>character</code> (str): The character for which to retrieve an insult.</li>
+        </ul>
+        <h3>/api/insults/season/{season}/episode/{episode}/character/{character}</h3>
+        <p>Get a random insult for a specific season, episode, and character.</p>
+        <code>GET /api/insults/season/{season}/episode/{episode}/character/{character}</code>
+        <p>Parameters:</p>
+        <ul>
+            <li><code>season</code> (int): The season for which to retrieve an insult.</li>
+            <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
+            <li><code>character</code> (str): The character for which to retrieve an insult.</li>
+        </ul>
+        <hr>
+        <p>For more details, referdd to the <a href="/docs">FastAPI documentation</a>.</p></p>
+        </div>
+        </div>
+        </div>
         <div class="row">
-            <div class="column">
-                <h1>Insults API Documentation</h1>
-                <p>Welcome to the Insults API documentation. This API provides a collection of insults from the TV show "Silicon Valley."</p>
-                <h2>Endpoints</h2>
-                <h3>/api/insults</h3>
-                <p>Get a random insult from all available insults.</p>
-                <code>GET /api/insults</code>
-                <h3>/api/insults/season/{season}</h3>
-                <p>Get a random insult for a specific season.</p>
-                <code>GET /api/insults/season/{season}</code>
-                <p>Parameters:</p>
-                <ul>
-                    <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-                </ul>
-                <h3>/api/insults/season/{season}/episode/{episode}</h3>
-                <p>Get a random insult for a specific season and episode.</p>
-                <code>GET /api/insults/season/{season}/episode/{episode}</code>
-                <p>Parameters:</p>
-                <ul>
-                    <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-                    <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
-                </ul>
-                <h3>/api/insults/character/{character}</h3>
-                <p>Get a random insult for a specific character.</p>
-                <code>GET /api/insults/character/{character}</code>
-                <p>Parameters:</p>
-                <ul>
-                    <li><code>character</code> (str): The character for which to retrieve an insult.</li>
-                </ul>
-                <h3>/api/insults/season/{season}/character/{character}</h3>
-                <p>Get a random insult for a specific season and character.</p>
-                <code>GET /api/insults/season/{season}/character/{character}</code>
-                <p>Parameters:</p>
-                <ul>
-                    <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-                    <li><code>character</code> (str): The character for which to retrieve an insult.</li>
-                </ul>
-                <h3>/api/insults/season/{season}/episode/{episode}/character/{character}</h3>
-                <p>Get a random insult for a specific season, episode, and character.</p>
-                <code>GET /api/insults/season/{season}/episode/{episode}/character/{character}</code>
-                <p>Parameters:</p>
-                <ul>
-                    <li><code>season</code> (int): The season for which to retrieve an insult.</li>
-                    <li><code>episode</code> (int): The episode for which to retrieve an insult.</li>
-                    <li><code>character</code> (str): The character for which to retrieve an insult.</li>
-                </ul>
-                <hr>
-                <p>For more details, referdd to the <a href="/docs">FastAPI documentation</a>.</p></p>
+            <div class="col">
+                <footer class="d-flex flex-column justify-content-center align-items-center p-5">
+                    <div class="p-2 monospace small">
+                        Designed and coded by me, Daniel. Powered by <a href="https://fastapi.tiangolo.com/">FastAPI</a>.
+                        <div>
+                            <a class="p-2" href="https://www.danielbrainich.com"><img src="assets/images/homepage.png" width="24" height="24" alt="Linkedin Icon"></a>
+                            <a class="p-2" href="mailto: danielbrainich@gmail.com"><img src="assets/images/email.png" width="24" height="24" alt="Linkedin Icon"></a>
+                            <a class="p-2" href="https://www.linkedin.com/in/danielbrainich"><img src="assets/images/linkedin.png" width="24" height="24" alt="Linkedin Icon"></a>
+                            <a class="p-2" href="https://www.github.com/danielbrainich"><img src="assets/images/github.png" width="24" height="24" alt="Github icon"></a>
+                        </div>
+                    </footer>
+                </div>
             </div>
         </div>
     </div>
-
+</div>
+</div>
 </body>
 </html>

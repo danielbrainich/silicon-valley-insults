@@ -2,7 +2,7 @@
 // Option A: Include all of Bootstrap
 
 // Include any default variable overrides here (though functions won't be available)
-$primary: #7FC844;
+$primary: red;
 
 @import "../node_modules/bootstrap/scss/_functions";
 @import "../node_modules/bootstrap/scss/_variables";
@@ -15,10 +15,15 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+h1 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
 h2 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 h3 {
