@@ -4,10 +4,24 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import random
 from insults import insults
+from fastapi.middleware.cors import CORSMiddleware
 
 
 silicon_valley_insults = FastAPI()
 silicon_valley_insults.mount("/static", StaticFiles(directory="static"), name="static")
+
+origins = [
+    "*"
+]
+
+silicon_valley_insults.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["GET"],
+	allow_headers=["*"],
+    max_age=3600,
+)
 
 
 class DetailedInsult(BaseModel):
