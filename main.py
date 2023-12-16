@@ -10,16 +10,14 @@ from fastapi.middleware.cors import CORSMiddleware
 silicon_valley_insults = FastAPI()
 silicon_valley_insults.mount("/static", StaticFiles(directory="static"), name="static")
 
-origins = [
-    "*"
-]
+
 
 silicon_valley_insults.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["GET"],
-	allow_headers=["*"],
+	allow_headers=[""],
     max_age=3600,
 )
 
@@ -81,9 +79,9 @@ async def get_insult_by_season_and_episode(season: int, episode: int):
 
 @silicon_valley_insults.get("/api/insults/character/{character}", response_model=DetailedInsult)
 async def get_insult_by_character(character: str):
-    character_insults = [insult for insult in insults["insults"] if insult["character"] == character]
+    character_insults = [insult for insult in insults["insults"] if (insult["character"]).lower() == character]
     if not character_insults:
-        raise HTTPException(status_code=404, detail=f"No insults available for character {character}")
+        raise HTTPException(status_code=404, detail=f"No insults available for character {(character).title()}")
     random_insult = random.choice(character_insults)
     return DetailedInsult(
         season=random_insult["season"],
@@ -96,12 +94,12 @@ async def get_insult_by_character(character: str):
 async def get_insult_by_season_and_character(season: int, character: str):
     season_character_insults = [
         insult for insult in insults["insults"]
-        if insult["season"] == season and insult["character"] == character
+        if insult["season"] == season and (insult["character"]).lower() == character
     ]
     if not season_character_insults:
         raise HTTPException(
             status_code=404,
-            detail=f"No insults available for season {season} and character {character}"
+            detail=f"No insults available for season {season} and character {(character).title()}"
         )
     random_insult = random.choice(season_character_insults)
     return DetailedInsult(
@@ -115,12 +113,12 @@ async def get_insult_by_season_and_character(season: int, character: str):
 async def get_insult_by_season_episode_and_character(season: int, episode: int, character: str):
     episode_character_insults = [
         insult for insult in insults["insults"]
-        if insult["season"] == season and insult["episode"] == episode and insult["character"] == character
+        if insult["season"] == season and insult["episode"] == episode and (insult["character"]).lower() == character
     ]
     if not episode_character_insults:
         raise HTTPException(
             status_code=404,
-            detail=f"No insults available for season {season}, episode {episode}, and character {character}"
+            detail=f"No insults available for season {season}, episode {episode}, and character {(character).title()}"
         )
     random_insult = random.choice(episode_character_insults)
     return DetailedInsult(

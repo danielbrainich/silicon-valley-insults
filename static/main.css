@@ -36,7 +36,7 @@ a {
 }
 
 table {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 td:first-child {
@@ -44,6 +44,16 @@ td:first-child {
   font-weight: bold;
 }
 
+td {
+  font-size: 14px;
+}
+
 .primary {
   color: red;
+}
+
+.no-bullet > li {
+  list-style-type: none;
+  font-size: 14px;
+  margin-left: -30px;
 }
