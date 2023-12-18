@@ -10,8 +10,6 @@ from fastapi.middleware.cors import CORSMiddleware
 silicon_valley_insults = FastAPI()
 silicon_valley_insults.mount("/static", StaticFiles(directory="static"), name="static")
 
-
-
 silicon_valley_insults.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

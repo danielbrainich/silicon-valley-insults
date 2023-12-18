@@ -14,24 +14,23 @@ h3 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
-  color: red;
+  color: #C32148;
 }
 
 .primary {
-  color: red;
+  color: #C32148;
 }
 
-/* li {
-  list-style-type: '🤬';
-  padding-inline-start: 1ch;
-} */
+.light-bg {
+  background-color: #FAF5EE;
+}
 
 nav li {
     list-style-type: none;
   }
 
 a {
-  color: red;
+  color: #C32148;
   text-decoration: none;
 }
 
@@ -49,7 +48,7 @@ td {
 }
 
 .primary {
-  color: red;
+  color: #C32148;
 }
 
 .no-bullet > li {
