@@ -29,38 +29,55 @@ Path: /api/insults
 ### Get a Random Insult by Character
 
 Method: GET
+
 Path: /api/insults/character/{character}
+
 Parameters: {character} is a string representing the first name of the character you want an insult from.
 
 ### Get a Random Insult by Season
 
 Method: GET
+
 Path: /api/insults/season/{season}
+
 Parameters: {season} is an integer representing the season you want an insult from.
 
 ### Get a Random Insult by Season and Character
 
 Method: GET
+
 Path: /api/insults/season/{season}/character/{character}
+
 Parameters:
+
 {season} is an integer representing the season.
+
 {character} is a string representing the character.
 
 ### Get a Random Insult by Season and Episode
 
 Method: GET
+
 Path: /api/insults/season/{season}/episode/{episode}
+
 Parameters:
+
 {season} is an integer representing the season.
+
 {episode} is an integer representing the episode.
 
 ### Get a Random Insult by Season, Episode, and Character
 
 Method: GET
+
 Path: /api/insults/season/{season}/episode/{episode}/character/{character}
+
 Parameters:
+
 {season} is an integer representing the season.
+
 {episode} is an integer representing the episode.
+
 {character} is a string representing the character.
 
 ## Development
