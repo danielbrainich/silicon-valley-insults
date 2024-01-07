@@ -22,7 +22,7 @@ insults = {
             "season": 1,
             "episode": 1,
             "character": "Erlich",
-            "insult": "You just disappeared up your own asshold. Did you know that?",
+            "insult": "You just disappeared up your own asshole. Did you know that?",
         },
 
         {
@@ -65,6 +65,48 @@ insults = {
             "episode": 2,
             "character": "Erlich",
             "insult": "Richard, stop being a fucking pussy and start being an asshole.",
+        },
+
+        {
+            "season": 1,
+            "episode": 3,
+            "character": "Erlich",
+            "insult": "I'm so sorry. Your voice doesn't really reach that register when you ejaculate, does it.",
+        },
+
+        {
+            "season": 1,
+            "episode": 3,
+            "character": "Dinesh",
+            "insult": "That's not really our logo is it? It looks like a guy sucking a dick and he's got another dick tucked behind his ear for later.",
+        },
+
+        {
+            "season": 1,
+            "episode": 4,
+            "character": "Erlich",
+            "insult": "You offering me a position on this board and reneging it is a perfect example of you having no vision, no balls, and no game.",
+        },
+
+        {
+            "season": 1,
+            "episode": 4,
+            "character": "Gilfoyle",
+            "insult": "Anything to do with \"error\" sounds like your whole vibe.",
+        },
+
+        {
+            "season": 1,
+            "episode": 4,
+            "character": "Dinesh",
+            "insult": "I handle errors like you every day.",
+        },
+
+        {
+            "season": 1,
+            "episode": 4,
+            "character": "Erlich",
+            "insult": "Chuy: \"Who's he?\"\nErlich: \"Oh, nobody. He's just a coder.\"",
         },
     ]
 }
