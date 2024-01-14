@@ -1,5 +1,5 @@
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
   font-size: 4rem;
   font-weight: 700;
 }
@@ -10,11 +10,18 @@ h2 {
   font-size: 1.25rem;
 }
 
+
 h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
   font-weight: 700;
   font-size: 1.25rem;
   color: #C32148;
+}
+
+h4 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  font-size: 1.25rem;
 }
 
 .primary {
@@ -41,6 +48,7 @@ table {
 td:first-child {
   padding-right: 2rem;
   font-weight: bold;
+  font-family: 'Roboto Slab', serif;
 }
 
 td {
@@ -55,4 +63,36 @@ td {
   list-style-type: none;
   font-size: 14px;
   margin-left: -30px;
+}
+
+.card {
+  border: solid black 2px;
+  border-radius: 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+
+hr {
+  border-top: 2px solid black;
+  border-width: 2px;
+}
+
+.custom-hr {
+  height: 2px; /* Sets the height of the line */
+  background-color: black; /* Sets the color of the line */
+  margin-top: 3rem; /* Adds spacing above and below the line */
+  margin-bottom: 3rem;
+  border: none; /* Ensures no border is applied */
+}
+
+.text-secondary {
+  color: black !important;
+  font-family: 'Roboto Slab', serif;
+}
+
+#small-text {
+  font-size: 14px;
 }

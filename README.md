@@ -1,7 +1,7 @@
 # Silicon Valley Insults API
 
 ## Introduction
-Silicon Valley Insults API is a RESTful service that provides a collection of insults from the HBO series "Silicon Valley". It offers various endpoints to retrieve insults based on character, season, and specific episodes.
+Silicon Valley Insults API is a RESTful service that provides a collection of insults from the HBO series "Silicon Valley". It offers multiple endpoints to retrieve insults based on character, season, and specific episodes.
 
 ## Quick Start
 To use the API, send HTTP GET requests to the available endpoints. The responses are in JSON format.
@@ -79,6 +79,16 @@ Parameters:
 {episode} is an integer representing the episode.
 
 {character} is a string representing the character.
+
+## Errors and Exceptions
+
+### Insult Does Not Exist
+
+The insult you request may not exist. For example, you may request an insult from Jared from Season 1 Episode 3 when no such insult exists in the database. In this case, you will receive the following exception:
+
+{
+    "detail": "No insults available for season 1, episode 3, and character Jared"
+}
 
 ## Development
 I built this API using FastAPI, a framework for building APIs with Python.

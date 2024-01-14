@@ -101,13 +101,6 @@ insults = {
             "character": "Dinesh",
             "insult": "I handle errors like you every day.",
         },
-
-        {
-            "season": 1,
-            "episode": 4,
-            "character": "Erlich",
-            "insult": "Chuy: \"Who's he?\"\nErlich: \"Oh, nobody. He's just a coder.\"",
-        },
     ]
 }
 
@@ -115,3 +108,10 @@ insults = {
 
 # s1 e2
 # I know Gilfoyle probably came in here and puked out a bunch of tech specs, three-fourths of which are total horse-sh*t.
+
+        # {
+        #     "season": 1,
+        #     "episode": 4,
+        #     "character": "Erlich",
+        #     "insult": "Chuy: \"Who's he?\"\nErlich: \"Oh, nobody. He's just a coder.\"",
+        # },
