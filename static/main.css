@@ -45,20 +45,31 @@ a {
   text-decoration: none;
 }
 
-table {
+.div-table {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 2rem;
+  overflow-x: auto;
 }
 
-td:first-child {
-  padding-right: 2rem;
+.div-table-row {
+  display: flex;
+  min-width: 100%;
+}
+
+.div-table-cell {
+  font-size: 14px;
+  padding: .25rem;
+  vertical-align: top;
+  flex: 1;
+}
+
+.div-table-cell:first-child {
+  padding-right: 1rem;
   font-weight: bold;
   font-family: 'Roboto Slab', serif;
-}
-
-td {
-  font-size: 14px;
-  overflow-wrap: break-word;
-  vertical-align: top;
+  width: 8rem;
+  flex: none;
 }
 
 .primary {
@@ -120,12 +131,6 @@ footer {
     height: auto;
 }
 
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-}
-
-table {
-  width: auto; /* Ensure the table can expand as needed */
-  border-collapse: collapse; /* Optional, for styling */
+.table td {
+  word-break: break-word; /* Breaks the line at natural points */
 }

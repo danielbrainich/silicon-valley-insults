@@ -91,17 +91,15 @@ fetch("https://www.siliconvalleyinsults.com/api/insults")
                                         <h4>API Endpoints</h4>
                                     </div>
                                     <h3>Get a random insult</h3>
-                                    <div class="table-container">
-                                        <table class="mt-4 mb-4">
-                                            <tr>
-                                                <td>Method</td>
-                                                <td>GET</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Path</td>
-                                                <td>/api/insults</td>
-                                            </tr>
-                                        </table>
+                                    <div class="div-table mt-4 mb-4">
+                                        <div class="div-table-row">
+                                            <div class="div-table-cell">Method</div>
+                                            <div class="div-table-cell">GET</div>
+                                        </div>
+                                        <div class="div-table-row">
+                                            <div class="div-table-cell">Path</div>
+                                            <div class="div-table-cell">/api/insults</div>
+                                        </div>
                                     </div>
                                     <p class="small mb-1 text-secondary">Sample request:</p>
                                     <div class="text-white bg-dark p-3 pb-0 rounded">
@@ -126,21 +124,23 @@ fetch("https://www.siliconvalleyinsults.com/api/insults")
                                 <div class="custom-hr"></div>
                                     <div class="my-4">
                                         <h3>Get a random insult by character</h3>
-                                        <div class="table-container">
-                                            <table class="mt-4 mb-4">
-                                                <tr>
-                                                    <td>Method</td>
-                                                    <td>GET</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Path</td>
-                                                    <td>/api/insults/character/<span class="primary">{character}</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Parameters</td>
-                                                    <td>{character} is a string representing the first name of character you want an insult from</td>
-                                                </tr>
-                                            </table>
+                                        <div class="div-table mt-4 mb-4">
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Method</div>
+                                                <div class="div-table-cell">GET</div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Path</div>
+                                                <div class="div-table-cell">
+                                                    /api/insults/character/<span class="primary">{character}</span>
+                                                </div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Parameters</div>
+                                                <div class="div-table-cell">
+                                                    {character} is a string representing the first name of character you want an insult from
+                                                </div>
+                                            </div>
                                         </div>
                                         <p class="small mb-1 text-secondary"> Sample request:</p>
                                         <div class="text-white bg-dark p-3 pb-0 rounded">
@@ -165,21 +165,23 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/character/jared")
                                     <div class="custom-hr"></div>
                                     <div class="my-4">
                                         <h3>Get a random insult by season</h3>
-                                        <div class="table-container">
-                                            <table class="mt-4 mb-4">
-                                                <tr>
-                                                    <td>Method</td>
-                                                    <td>GET</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Path</td>
-                                                    <td>/api/insults/season/<span class="primary">{season}</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Parameters</td>
-                                                    <td>{season} is an integer representing the season you want an insult from</td>
-                                                </tr>
-                                            </table>
+                                        <div class="div-table mt-4 mb-4">
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Method</div>
+                                                <div class="div-table-cell">GET</div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Path</div>
+                                                <div class="div-table-cell">
+                                                    /api/insults/season/<span class="primary">{season}</span>
+                                                </div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Parameters</div>
+                                                <div class="div-table-cell">
+                                                    {season} is an integer representing the season you want an insult from
+                                                </div>
+                                            </div>
                                         </div>
                                         <p class="small mb-1 text-secondary">Sample request:</p>
                                         <div class="text-white bg-dark p-3 pb-0 rounded">
@@ -204,25 +206,29 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1")
                                     <div class="custom-hr"></div>
                                     <div class="my-4">
                                         <h3>Get a random insult by season and character</h3>
-                                        <div class="table-container">
-                                            <table class="mt-4 mb-4">
-                                                <tr>
-                                                    <td>Method</td>
-                                                    <td>GET</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Path</td>
-                                                    <td>/api/insults/season/<span class="primary">{season}</span>/character/<span class="primary">{character}</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Parameters</td>
-                                                    <td>{season} is an integer representing the season you want an insult from</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>{character} is a string representing the character you want an insult from</td>
-                                                </tr>
-                                            </table>
+                                        <div class="div-table mt-4 mb-4">
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Method</div>
+                                                <div class="div-table-cell">GET</div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Path</div>
+                                                <div class="div-table-cell">
+                                                    /api/insults/season/<span class="primary">{season}</span>/character/<span class="primary">{character}</span>
+                                                </div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Parameters</div>
+                                                <div class="div-table-cell">
+                                                    {season} is an integer representing the season you want an insult from
+                                                </div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell"></div>
+                                                <div class="div-table-cell">
+                                                    {character} is a string representing the character you want an insult from
+                                                </div>
+                                            </div>
                                         </div>
                                         <p class="small mb-1 text-secondary">Sample request:</p>
                                         <div class="text-white bg-dark p-3 pb-0 rounded">
@@ -247,25 +253,29 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/character/erlic
                                     <div class="custom-hr"></div>
                                     <div class="my-4">
                                         <h3>Get a random insult by season and episode</h3>
-                                        <div class="table-container">
-                                            <table class="mt-4 mb-4">
-                                                <tr>
-                                                    <td>Method</td>
-                                                    <td>GET</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Path</td>
-                                                    <td>/api/insults/season/<span class="primary">{season}</span>/episode/<span class="primary">{episode}</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Parameters</td>
-                                                    <td>{season} is an integer representing the season you want an insult from</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>{episode} is an integer representing the episode you want an insult from</td>
-                                                </tr>
-                                            </table>
+                                        <div class="div-table mt-4 mb-4">
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Method</div>
+                                                <div class="div-table-cell">GET</div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Path</div>
+                                                <div class="div-table-cell">
+                                                    /api/insults/season/<span class="primary">{season}</span>/episode/<span class="primary">{episode}</span>
+                                                </div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Parameters</div>
+                                                <div class="div-table-cell">
+                                                    {season} is an integer representing the season you want an insult from
+                                                </div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell"></div>
+                                                <div class="div-table-cell">
+                                                    {episode} is an integer representing the episode you want an insult from
+                                                </div>
+                                            </div>
                                         </div>
                                         <p class="small mb-1 text-secondary">Sample request:</p>
                                         <div class="text-white bg-dark p-3 pb-0 rounded">
@@ -290,29 +300,35 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/2")
                                     <div class="custom-hr"></div>
                                     <div>
                                         <h3>Get a random insult by season and episode and character</h3>
-                                        <div class="table-container">
-                                            <table class="mt-4 mb-4">
-                                                <tr>
-                                                    <td>Method</td>
-                                                    <td>GET</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Path</td>
-                                                    <td>/api/insults/season/<span class="primary">{season}</span>/episode/<span class="primary">{episode}</span>/character/<span class="primary">{character}</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Parameters</td>
-                                                    <td>{season} is an integer representing the season you want an insult from</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>{episode} is an integer representing the episode you want an insult from</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>{character} is a string representing the character you want an insult from</td>
-                                                </tr>
-                                            </table>
+                                        <div class="div-table mt-4 mb-4">
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Method</div>
+                                                <div class="div-table-cell">GET</div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Path</div>
+                                                <div class="div-table-cell">
+                                                    /api/insults/season/<span class="primary">{season}</span>/episode/<span class="primary">{episode}</span>/character/<span class="primary">{character}</span>
+                                                </div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell">Parameters</div>
+                                                <div class="div-table-cell">
+                                                    {season} is an integer representing the season you want an insult from
+                                                </div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell"></div>
+                                                <div class="div-table-cell">
+                                                    {episode} is an integer representing the episode you want an insult from
+                                                </div>
+                                            </div>
+                                            <div class="div-table-row">
+                                                <div class="div-table-cell"></div>
+                                                <div class="div-table-cell">
+                                                    {character} is a string representing the character you want an insult from
+                                                </div>
+                                            </div>
                                         </div>
                                         <p class="small mb-1 text-secondary">Sample request:</p>
                                         <div class="text-white bg-dark p-3 pb-0 rounded">
