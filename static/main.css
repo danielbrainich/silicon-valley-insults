@@ -61,7 +61,7 @@ a {
   font-size: 14px;
   padding: .25rem;
   vertical-align: top;
-  flex: 1;
+  /* flex: 1; */
 }
 
 .div-table-cell:first-child {
