@@ -16,12 +16,39 @@
             <div class="row">
                 <div class="col">
                     <main>
-                        <div class="d-flex flex-column align-items-center justify-content-center p-5">
-                            <h1>Silicon Valley Insults <span class="primary">API</span></h1>
-                            <h2>A REST API serving up the best insults from the HBO series "Silicon Valley"</h2>
-                            <img class="rounded mt-5" src="static/images/gif.webp" width="400" alt="Jared from Silicon Valley saying &quot;I sense you're doing something ironic.&quot;">
+                        <div class="p-5 d-flex flex-column align-items-center justify-content-center">
+                            <img src="../static/images/insults-logo-art.png" width="500" alt="Silicon Valley Insults Logo" />
                         </div>
-                        <div class="card px-5 pt-5 pb-2 col-xs-12 col-xl-10 offset-xl-1">
+
+                        <div class="card mt-5 pt-4 px-4 pb-2 col-xs-12 col-xl-10 offset-xl-1">
+                            <div class="card-body mx-3">
+                                <div class="d-flex flex-column align-items-center justify-content-center pb-4">
+                                    <div class="d-flex justify-content-center mb-4">
+                                        <h4>About</h4>
+                                    </div>
+                                    <p>
+                                        Silicon Valley Insults API is a public RESTful API that delivers up humorous tech-themed insults from the television show "Silicon Valley" to multiple
+                                        endpoints, where users are able to request content by season, episode, and character.
+                                    </p>
+                                    <div class="row d-flex align-items-center justify-content-center">
+                                        <div class="col-md-6">
+                                            <ul class="about-list">
+                                                <li>No API key needed.</li>
+                                                <li>Some insults contain strong language.</li>
+                                                <li>Default rate limit is 100 requests per hour.</li>
+                                                <li>In-depth documentation can be found below.</li>
+                                                <li>Enjoy!</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img class="rounded m-2" src="static/images/gif.webp" width="400" alt="Jared from Silicon Valley saying 'I sense you're doing something ironic.'" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-5 pt-5 px-5 pb-2 col-xs-12 col-xl-10 offset-xl-1">
                             <div class="d-flex flex-column align-items-center justify-content-center pb-4">
                                 <div class="d-flex justify-content-center mb-4">
                                     <h4>Sample Request and Response</h4>
@@ -307,11 +334,11 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/2/chara
 
                             <div class="card px-5 pt-5 pb-2 col-xs-12 col-xl-10 offset-xl-1 mt-5">
                                 <div class="card-body mx-3">
-                                    <div class="d-flex flex-column align-items-center justify-content-center pb-4">
+                                    <div class="d-flex flex-column align-items-center justify-content-center">
                                         <div class="d-flex justify-content-center mb-4">
                                             <h4>Errors and Exceptions</h4>
                                         </div>
-                                        <div id="six" class="my-4">
+                                        <div id="six" class="mb-5">
                                             <h3>Insult does not exist</h3>
                                             <p id="small-text">
                                                 The insult you request may not exist. For example, you may request an insult from Jared from Season 1 Episode 3 when no such insult exists in the
@@ -337,26 +364,40 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/3/chara
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                     </main>
-                    <footer>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
                         <div class="col d-flex flex-column align-items-center p-3">
                             <div class="pt-1">
-                                <a class="pe-2" href="https://www.danielbrainich.com"><img src="../static/images/homepage.png" width="20" height="20" alt="Homepage icon" /></a>
-                                <a class="p-2" href="mailto: danielbrainich@gmail.com"><img src="../static/images/email.png" width="20" height="20" alt="Email icon" /></a>
-                                <a class="p-2" href="https://www.linkedin.com/in/danielbrainich"><img src="../static/images/linkedin.png" width="20" height="20" alt="Linkedin icon" /></a>
-                                <a class="p-2" href="https://www.github.com/danielbrainich"><img src="../static/images/github.png" width="20" height="20" alt="Github icon" /></a>
+                                <a class="pe-2" href="https://www.danielbrainich.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="../static/images/portfolio.png" width="20" height="20" alt="Homepage icon" />
+                                </a>
+                                <a class="p-2" href="mailto:danielbrainich@gmail.com">
+                                    <img src="../static/images/email.png" width="20" height="20" alt="Email icon" />
+                                </a>
+                                <a class="p-2" href="https://www.linkedin.com/in/danielbrainich" target="_blank" rel="noopener noreferrer">
+                                    <img src="../static/images/linkedin.png" width="20" height="20" alt="Linkedin icon" />
+                                </a>
+                                <a class="p-2" href="https://www.github.com/danielbrainich" target="_blank" rel="noopener noreferrer">
+                                    <img src="../static/images/github.png" width="20" height="20" alt="Github icon" />
+                                </a>
                             </div>
+
                             <div class="pt-2 small">
                                 Designed and coded by me, Daniel.
                             </div>
                         </div>
-                    </footer>
+                    </div>
                 </div>
             </div>
-        </div>
+        </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>
