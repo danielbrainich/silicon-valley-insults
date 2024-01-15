@@ -115,14 +115,12 @@ footer {
   margin-top: 4rem;
   }
 
-  @media (max-width: 768px) {
-    /* Adjust padding for cards on small screens */
-    .card {
-        padding: 1rem; /* You can adjust this value as needed */
-    }
-}
-
 .image-responsive {
     max-width: 100%;
     height: auto;
+}
+
+.table-container {
+  overflow-x: auto;
+  white-space: nowrap;
 }
