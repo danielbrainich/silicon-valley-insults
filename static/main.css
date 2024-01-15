@@ -69,23 +69,11 @@ a {
   padding-right: 1rem;
   font-weight: bold;
   font-family: 'Roboto Slab', serif;
-  width: 8rem
+  width: 8rem;
 }
 
-@media (max-width: 600px) {
-  .div-table-row {
-      display: block; /* Changes row display to block on small screens */
-  }
-
-  .div-table-cell {
-      display: block; /* Each cell takes full width, stacking vertically */
-      width: auto; /* Full width for each cell */
-      padding: .25rem; /* Adjust padding as needed */
-  }
-
-  .div-table-cell:first-child {
-      padding-right: .25rem; /* Consistent padding with other cells */
-  }
+.div-table-cell:last-child {
+  flex: 1;
 }
 
 .primary {
