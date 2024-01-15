@@ -121,6 +121,11 @@ footer {
 }
 
 .table-container {
+  width: 100%;
   overflow-x: auto;
-  white-space: nowrap;
+}
+
+table {
+  width: auto; /* Ensure the table can expand as needed */
+  border-collapse: collapse; /* Optional, for styling */
 }
