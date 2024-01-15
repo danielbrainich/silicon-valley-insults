@@ -47,7 +47,6 @@ a {
 
 table {
   margin-bottom: 2rem;
-  width: 100%; /* Ensure table spans the full width of its container */
 }
 
 td:first-child {
@@ -58,9 +57,8 @@ td:first-child {
 
 td {
   font-size: 14px;
-  overflow-wrap: break-word; /* Allow content to wrap within table cells */
-  vertical-align: top; /* Align content to the top of the cells */
-
+  overflow-wrap: break-word;
+  vertical-align: top;
 }
 
 .primary {
@@ -122,4 +120,9 @@ footer {
     .card {
         padding: 1rem; /* You can adjust this value as needed */
     }
+}
+
+.image-responsive {
+    max-width: 100%;
+    height: auto;
 }
