@@ -46,22 +46,23 @@ a {
 }
 
 .div-table {
-  display: flex;
-  flex-direction: column;
+  display: block; /* Changed from flex to block */
+  width: 100%;
+  overflow-x: auto; /* Allows horizontal scrolling for the entire table */
   margin-bottom: 2rem;
-  overflow-x: auto;
 }
 
 .div-table-row {
   display: flex;
-  min-width: 100%;
+  min-width: 600px;
 }
 
 .div-table-cell {
   font-size: 14px;
+  overflow-wrap: break-word;
   padding: .25rem;
   vertical-align: top;
-  /* flex: 1; */
+  box-sizing: border-box;
 }
 
 .div-table-cell:first-child {
@@ -69,7 +70,6 @@ a {
   font-weight: bold;
   font-family: 'Roboto Slab', serif;
   width: 8rem;
-  flex: none;
 }
 
 .primary {
