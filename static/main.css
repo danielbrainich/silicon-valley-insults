@@ -47,6 +47,7 @@ a {
 
 table {
   margin-bottom: 2rem;
+  width: 100%; /* Ensure table spans the full width of its container */
 }
 
 td:first-child {
@@ -57,6 +58,9 @@ td:first-child {
 
 td {
   font-size: 14px;
+  overflow-wrap: break-word; /* Allow content to wrap within table cells */
+  vertical-align: top; /* Align content to the top of the cells */
+
 }
 
 .primary {
@@ -112,3 +116,10 @@ footer {
   border: solid black 2px;
   margin-top: 4rem;
   }
+
+  @media (max-width: 768px) {
+    /* Adjust padding for cards on small screens */
+    .card {
+        padding: 1rem; /* You can adjust this value as needed */
+    }
+}

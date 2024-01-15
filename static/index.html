@@ -4,25 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Silicon Valley Insults</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="static/main.css" />
+        <link rel="stylesheet" href="static/main.css">
     </head>
     <body>
-        <div class="container d-flex flex-column min-vh-100">
-            <div class="row">
-                <div class="col">
-                    <main>
+        <main>
+            <div class="container d-flex flex-column min-vh-100">
+                <div class="row">
+                    <div class="col">
                         <div class="p-5 d-flex flex-column align-items-center justify-content-center">
-                            <img src="../static/images/insults-logo-art.png" width="500" alt="Silicon Valley Insults Logo" />
+                            <img src="../static/images/insults-logo-art.png" width="500" alt="Silicon Valley Insults Logo">
                         </div>
 
-                        <div class="card mt-5 pt-4 px-4 pb-2 col-xs-12 col-xl-10 offset-xl-1">
-                            <div class="card-body mx-3">
-                                <div class="d-flex flex-column align-items-center justify-content-center pb-4">
+                        <div class="card col-xs-12 col-xl-10 offset-xl-1 my-5">
+                            <div class="card-body mx-md-5 my-md-5">
+                                <div class="d-flex flex-column align-items-center justify-content-center">
                                     <div class="d-flex justify-content-center mb-4">
                                         <h4>About</h4>
                                     </div>
@@ -31,7 +31,7 @@
                                         endpoints, where users are able to request content by season, episode, and character.
                                     </p>
                                     <div class="row d-flex align-items-center justify-content-center">
-                                        <div class="col-md-6">
+                                        <div class="col-xs-12 col-lg-6">
                                             <ul class="about-list">
                                                 <li>No API key needed.</li>
                                                 <li>Some insults contain strong language.</li>
@@ -40,59 +40,52 @@
                                                 <li>Enjoy!</li>
                                             </ul>
                                         </div>
-                                        <div class="col-md-6">
-                                            <img class="rounded m-2" src="static/images/gif.webp" width="400" alt="Jared from Silicon Valley saying 'I sense you're doing something ironic.'" />
+                                        <div class="col-xs-12 col-lg-6">
+                                            <img class="rounded" src="static/images/gif.webp" width="400" alt="Jared from Silicon Valley saying 'I sense you're doing something ironic.'">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card mt-5 pt-5 px-5 pb-2 col-xs-12 col-xl-10 offset-xl-1">
-                            <div class="d-flex flex-column align-items-center justify-content-center pb-4">
-                                <div class="d-flex justify-content-center mb-4">
-                                    <h4>Sample Request and Response</h4>
-                                </div>
-                                <p class="small mb-1 text-secondary">Sample Request:</p>
-                                <div class="col-lg-8 text-white bg-dark p-4 pb-0 rounded">
-                                    <pre class="mb-0">
-fetch("https://www.siliconvalleyinsults.com/api/insults")
-.then((response) => response.json())
-.then((insult) => console.log(insult));
-                                    </pre>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-center">
+                        <div class="card col-xs-12 col-xl-10 offset-xl-1 my-5">
+                            <div class="card-body mx-md-5 my-md-5">
                                 <div>
-                                    <style>
-                                        .material-symbols-outlined {
-                                            font-variation-settings:
-                                            'FILL' 0,
-                                            'wght' 400,
-                                            'GRAD' 0,
-                                            'opsz' 24
-                                        }
-                                    </style>
-                                    <span class="material-symbols-outlined">keyboard_double_arrow_down</span>
+                                    <div class="d-flex justify-content-center mb-4">
+                                        <h4>Sample Request and Response</h4>
+                                    </div>
+                                    <p class="small mb-1 text-secondary">Sample request:</p>
+                                    <div class="text-white bg-dark p-3 pb-0 rounded">
+                                        <pre class="mb-0">
+    fetch("https://www.siliconvalleyinsults.com/api/insults")
+    .then((response) => response.json())
+    .then((insult) => console.log(insult));
+                                        </pre>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="d-flex flex-column align-items-center justify-content-center pt-2 pb-5">
-                                <p class="small mb-1 text-secondary">Sample response:</p>
-                                <div class="col-lg-8 text-white bg-dark p-4 pb-0 rounded">
-                                    <pre class="mb-0">
-{
-    season: 1,
-    episode: 2,
-    character: "Gavin",
-    insult: "I hate Richard Hendricks, that little Pied Piper prick.",
-}
-                                    </pre>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="mt-4">
+                                        <span class="material-symbols-outlined">keyboard_double_arrow_down</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="small mb-1 text-secondary">Sample request:</p>
+                                    <div class="text-white bg-dark p-3 pb-0 rounded">
+                                        <pre class="mb-0">
+    {
+        season: 1,
+        episode: 2,
+        character: "Gavin",
+        insult: "I hate Richard Hendricks, that little Pied Piper prick.",
+    }
+                                        </pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div id="one" class="card mt-5 p-5 col-xs-12 col-xl-10 offset-xl-1">
-                            <div class="card-body mx-3">
+                        <div class="card col-xs-12 col-xl-10 offset-xl-1 my-5">
+                            <div class="card-body mx-md-5 my-md-5">
                                 <div>
                                     <div class="d-flex justify-content-center mb-4">
                                         <h4>API Endpoints</h4>
@@ -129,7 +122,7 @@ fetch("https://www.siliconvalleyinsults.com/api/insults")
                                     </div>
                                 </div>
                                 <div class="custom-hr"></div>
-                                    <div id="two" class="my-4">
+                                    <div class="my-4">
                                         <h3>Get a random insult by character</h3>
                                         <table class="mt-4 mb-4">
                                             <tr>
@@ -166,7 +159,7 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/character/jared")
                                         </div>
                                     </div>
                                     <div class="custom-hr"></div>
-                                    <div id="three" class="my-4">
+                                    <div class="my-4">
                                         <h3>Get a random insult by season</h3>
                                         <table class="mt-4 mb-4">
                                             <tr>
@@ -203,7 +196,7 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1")
                                         </div>
                                     </div>
                                     <div class="custom-hr"></div>
-                                    <div id="four" class="my-4">
+                                    <div class="my-4">
                                         <h3>Get a random insult by season and character</h3>
                                         <table class="mt-4 mb-4">
                                             <tr>
@@ -244,7 +237,7 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/character/erlic
                                         </div>
                                     </div>
                                     <div class="custom-hr"></div>
-                                    <div id="five" class="my-4">
+                                    <div class="my-4">
                                         <h3>Get a random insult by season and episode</h3>
                                         <table class="mt-4 mb-4">
                                             <tr>
@@ -285,7 +278,7 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/2")
                                         </div>
                                     </div>
                                     <div class="custom-hr"></div>
-                                    <div id="six" class="my-4">
+                                    <div>
                                         <h3>Get a random insult by season and episode and character</h3>
                                         <table class="mt-4 mb-4">
                                             <tr>
@@ -332,13 +325,13 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/2/chara
                                 </div>
                             </div>
 
-                            <div class="card px-5 pt-5 pb-2 col-xs-12 col-xl-10 offset-xl-1 mt-5">
-                                <div class="card-body mx-3">
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="card col-xs-12 col-xl-10 offset-xl-1 my-5">
+                                <div class="card-body mx-md-5 my-md-5">
+                                    <div>
                                         <div class="d-flex justify-content-center mb-4">
                                             <h4>Errors and Exceptions</h4>
                                         </div>
-                                        <div id="six" class="mb-5">
+                                        <div class="">
                                             <h3>Insult does not exist</h3>
                                             <p id="small-text">
                                                 The insult you request may not exist. For example, you may request an insult from Jared from Season 1 Episode 3 when no such insult exists in the
@@ -347,7 +340,7 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/2/chara
                                             <p class="small mb-1 text-secondary">Sample request:</p>
                                             <div class="text-white bg-dark p-3 pb-0 rounded">
                                                 <pre>
-fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/3/character/jared")
+    fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/3/character/jared")
     .then((response) => response.json())
     .then((insult) => console.log(insult));
                                                 </pre>
@@ -355,9 +348,9 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/3/chara
                                             <p class="small mb-1 text-secondary">Sample response:</p>
                                             <div class="text-white bg-dark p-3 pb-0 rounded">
                                                 <pre>
-{
+    {
     "detail": "No insults available for season 1, episode 3, and character Jared"
-}
+    }
                                                 </pre>
                                             </div>
                                         </div>
@@ -365,10 +358,9 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/3/chara
                                 </div>
                             </div>
                         </div>
-                    </main>
+                    </div>
                 </div>
-            </div>
-        </div>
+        </main>
 
         <footer>
             <div class="container">
@@ -377,16 +369,16 @@ fetch("https://www.siliconvalleyinsults.com/api/insults/season/1/episode/3/chara
                         <div class="col d-flex flex-column align-items-center p-3">
                             <div class="pt-1">
                                 <a class="pe-2" href="https://www.danielbrainich.com" target="_blank" rel="noopener noreferrer">
-                                    <img src="../static/images/portfolio.png" width="20" height="20" alt="Homepage icon" />
-                                </a>
-                                <a class="p-2" href="mailto:danielbrainich@gmail.com">
-                                    <img src="../static/images/email.png" width="20" height="20" alt="Email icon" />
+                                    <img src="../static/images/portfolio.png" width="20" height="20" alt="Homepage icon">
                                 </a>
                                 <a class="p-2" href="https://www.linkedin.com/in/danielbrainich" target="_blank" rel="noopener noreferrer">
-                                    <img src="../static/images/linkedin.png" width="20" height="20" alt="Linkedin icon" />
+                                    <img src="../static/images/linkedin.png" width="20" height="20" alt="Linkedin icon">
                                 </a>
                                 <a class="p-2" href="https://www.github.com/danielbrainich" target="_blank" rel="noopener noreferrer">
-                                    <img src="../static/images/github.png" width="20" height="20" alt="Github icon" />
+                                    <img src="../static/images/github.png" width="20" height="20" alt="Github icon">
+                                </a>
+                                <a class="p-2" href="mailto:danielbrainich@gmail.com">
+                                    <img src="../static/images/email.png" width="20" height="20" alt="Email icon">
                                 </a>
                             </div>
 
