@@ -1,3 +1,15 @@
+# Python virtual environment
 .venv/
-test.py
+
+# Compiled Python files
 __pycache__/
+
+# Node.js dependencies
+node_modules/
+
+# Package-lock files
+package-lock.json
+
+# Docker files
+.dockerignore
+dockerfile
