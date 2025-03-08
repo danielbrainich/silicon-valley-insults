@@ -1,5 +1,5 @@
 body {
-  background-color: #C32148;
+  background-color: #F9F4F1;
 }
 
 h1 {
@@ -30,10 +30,6 @@ h4 {
 
 .primary {
   color: #C32148;
-}
-
-.light-bg {
-  background-color: #FAF5EE;
 }
 
 nav li {
@@ -87,13 +83,10 @@ a {
 }
 
 .card {
-  border: solid black 2px;
-  border-radius: 0;
-  transition: box-shadow 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+  border-radius: 10px; /* Softer corners */
+  border: none; /* Remove any default border */
+  background: #fff; /* White background for clean look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a soft, natural floating effect */
 }
 
 hr {
@@ -125,8 +118,6 @@ hr {
 }
 
 footer {
-  background-color: white;
-  border: solid black 2px;
   margin-top: 4rem;
   }
 
