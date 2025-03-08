@@ -1,6 +1,6 @@
-body {
+/* body {
   background-color: #F9F4F1;
-}
+} */
 
 h1 {
   font-family: 'Roboto Slab', serif;
@@ -19,7 +19,7 @@ h3 {
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
   font-size: 1.25rem;
-  color: #C32148;
+  color: #EB5028;
 }
 
 h4 {
@@ -29,7 +29,7 @@ h4 {
 }
 
 .primary {
-  color: #C32148;
+  color: #EB5028;
 }
 
 nav li {
@@ -37,7 +37,7 @@ nav li {
   }
 
 a {
-  color: #C32148;
+  color: #EB5028;
   text-decoration: none;
 }
 
@@ -73,7 +73,7 @@ a {
 }
 
 .primary {
-  color: #C32148;
+  color: #EB5028;
 }
 
 .no-bullet > li {
@@ -86,7 +86,7 @@ a {
   border-radius: 10px; /* Softer corners */
   border: none; /* Remove any default border */
   background: #fff; /* White background for clean look */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a soft, natural floating effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Subtle shadow for a soft, natural floating effect
 }
 
 hr {
@@ -95,8 +95,8 @@ hr {
 }
 
 .custom-hr {
-  height: 2px;
-  background-color: black;
+  height: 1px;
+  background-color: grey;
   margin-top: 3rem;
   margin-bottom: 3rem;
   border: none;
@@ -128,4 +128,8 @@ footer {
 
 .table td {
   word-break: break-word; /* Breaks the line at natural points */
+}
+
+.fas {
+  color: #007bff; /* Change color to blue */
 }
