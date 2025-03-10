@@ -2,34 +2,41 @@
   background-color: #F9F4F1;
 } */
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
 h1 {
-  font-family: 'Roboto Slab', serif;
-  font-size: 4rem;
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
   font-weight: 700;
+  color: #E82327;
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Bagel Fat One", system-ui;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
 }
 
 
 h3 {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Bagel Fat One", system-ui;
   font-weight: 700;
-  font-size: 1.25rem;
-  color: #EB5028;
+  font-size: 2rem;
+  color: #E82327;
 }
 
 h4 {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Bagel Fat One", system-ui;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
 }
 
 .primary {
-  color: #EB5028;
+  color: #E82327;
 }
 
 nav li {
@@ -37,7 +44,7 @@ nav li {
   }
 
 a {
-  color: #EB5028;
+  color: #E82327;
   text-decoration: none;
 }
 
@@ -64,7 +71,7 @@ a {
 .div-table-cell:first-child {
   padding-right: 1rem;
   font-weight: bold;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Inter", sans-serif;
   width: 8rem;
 }
 
@@ -73,7 +80,7 @@ a {
 }
 
 .primary {
-  color: #EB5028;
+  color: #E82327;
 }
 
 .no-bullet > li {
@@ -83,10 +90,10 @@ a {
 }
 
 .card {
-  border-radius: 10px; /* Softer corners */
-  border: none; /* Remove any default border */
-  background: #fff; /* White background for clean look */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Subtle shadow for a soft, natural floating effect
+  border-radius: 10px;
+  border: none;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 hr {
@@ -104,7 +111,7 @@ hr {
 
 .text-secondary {
   color: black !important;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Inter", sans-serif;
 }
 
 #small-text {
